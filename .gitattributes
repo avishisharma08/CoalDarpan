@@ -1,0 +1,19 @@
+﻿# Exclude dependencies and builds
+node_modules/ linguist-vendored
+client/node_modules/ linguist-vendored
+server/node_modules/ linguist-vendored
+client/dist/ linguist-vendored
+client/build/ linguist-vendored
+docs/ linguist-documentation
+*.min.js linguist-vendored
+package-lock.json linguist-generated
+client/package-lock.json linguist-generated
+server/package-lock.json linguist-generated
+
+# Suppress markup templates from skewing language distribution
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+
+# Explicit language override to TypeScript
+*.js linguist-language=TypeScript
+*.jsx linguist-language=TypeScript
